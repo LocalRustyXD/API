@@ -10,13 +10,6 @@ app.listen(30144, () => {
 });
 
 app.get('/codes', (req, res) => {
-    if (req.headers.auth !== ApiAuth) {
-        console.log('auth errado');
-
-        return res.status(200).json({
-            message: "hmm"
-        });
-    };
     return res.status(200).json(require('./codes.json'));
 });
 
